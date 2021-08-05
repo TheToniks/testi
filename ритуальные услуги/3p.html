@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/1p.css">
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="content"></div>
+	<div class="Main_menu">
+    <a>Меню</a>
+    <div class="menu">
+      <div><a href="1p.html">Главная</a></div>
+      <div><a href="2p.html">Услуги</a></div>
+      <div><a href="3p.html">Рассчет заказа</a></div>
+    </div>
+	</div>
+</div>
+
+<button id="but" >Рассчет заказа</button>
+
+<div id="myModal" class="modal">
+
+  <div class="modal-content">
+  
+      <span class="close">&times;</span>
+
+    <div class="forma">
+	<form onsubmit="return false;" oninput="vivod()">
+    <select class="custom-select" name="vib" id="vib1">
+      <option value="">Выберите...</option>
+      <option value="po">Похороны</option>
+      <option value="kr">Кремация</option>
+      <option value="ri">Ритуальный зал</option>
+      <option value="of">Оформление документов</option>
+      <option value="is">Эксгумацтя и перезахоронение</option>
+  </select> стоимость <input id="1" type="number" value="0"> 
+  <br>
+  <select class="custom-select" name="vib" id="vib1">
+    <option value="">Выберите...</option>
+    <option value="po">Похороны</option>
+    <option value="kr">Кремация</option>
+    <option value="ri">Ритуальный зал</option>
+    <option value="of">Оформление документов</option>
+    <option value="is">Эксгумацтя и перезахоронение</option>
+</select> стоимость <input id="2" type="number" value="0"> 
+<br>
+<select class="custom-select" name="vib" id="vib1">
+  <option value="">Выберите...</option>
+  <option value="po">Похороны</option>
+  <option value="kr">Кремация</option>
+  <option value="ri">Ритуальный зал</option>
+  <option value="of">Оформление документов</option>
+  <option value="is">Эксгумацтя и перезахоронение</option>
+</select> стоимость <input id="3" type="number" value="0"> 
+<br>
+<select class="custom-select" name="vib" id="vib1">
+  <option value="">Выберите...</option>
+  <option value="po">Похороны</option>
+  <option value="kr">Кремация</option>
+  <option value="ri">Ритуальный зал</option>
+  <option value="of">Оформление документов</option>
+  <option value="is">Эксгумацтя и перезахоронение</option>
+</select> стоимость <input id="4" type="number" value="0"> 
+<br>
+<select class="custom-select" name="vib" id="vib1">
+  <option value="">Выберите...</option>
+  <option value="po">Похороны</option>
+  <option value="kr">Кремация</option>
+  <option value="ri">Ритуальный зал</option>
+  <option value="of">Оформление документов</option>
+  <option value="is">Эксгумацтя и перезахоронение</option>
+</select> стоимость <input id="5" type="number" value="0"> 
+<br>
+стоиомсть заказа <output id="stoimost"></output>
+  
+	</div>
+	</form>
+  </div>
+
+</div>
+<script>
+function vivod(){
+ var stoimost = 0;
+ stoimost += parseFloat(document.getElementById('1').value);
+ stoimost += parseFloat(document.getElementById('2').value);
+ stoimost += parseFloat(document.getElementById('3').value);
+ stoimost += parseFloat(document.getElementById('4').value);
+ stoimost += parseFloat(document.getElementById('5').value);
+ document.getElementById('stoimost').innerHTML = stoimost;
+}
+
+</script>
+
+</form>
+<script>
+
+var modal = document.getElementById("myModal");
+
+
+var btn = document.getElementById("but");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+</script>
+
+</body>
+</html>
